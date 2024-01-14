@@ -13,29 +13,29 @@ C_to_F <- function(T_C) {
   return(T_F)
 }
 
-#' Calculate Ppc using Ahmed method
-#' 
-#' This function calculates Ppc using the Ahmed method.
-#' 
-#' @param gamma_g The gamma_g value
-#' @param yN2 The mole fraction of N2
-#' @param yCO2 The mole fraction of CO2
-#' @param yH2S The mole fraction of H2S
-#' @return The calculated Ppc
+# Calculate Ppc using Ahmed method
+# 
+# This function calculates Ppc using the Ahmed method.
+# 
+#param gamma_g The gamma_g value
+#param yN2 The mole fraction of N2
+#param yCO2 The mole fraction of CO2
+#param yH2S The mole fraction of H2S
+#return The calculated Ppc
 calculate_Ppc_ahmed_method <- function(gamma_g, yN2, yCO2, yH2S) {
   Ppc <- 678 - 50 * (gamma_g - 0.5) - 206.7 * yN2 + 440 * yCO2 + 606.7 * yH2S
   return(Ppc)
 }
 
-#' Calculate Tpc using Ahmed method
-#' 
-#' This function calculates Tpc using the Ahmed method.
-#' 
-#' @param gamma_g The gamma_g value
-#' @param yN2 The mole fraction of N2
-#' @param yCO2 The mole fraction of CO2
-#' @param yH2S The mole fraction of H2S
-#' @return The calculated Tpc
+# Calculate Tpc using Ahmed method
+#
+# This function calculates Tpc using the Ahmed method.
+# 
+# param gamma_g The gamma_g value
+# param yN2 The mole fraction of N2
+# param yCO2 The mole fraction of CO2
+# param yH2S The mole fraction of H2S
+# return The calculated Tpc
 calculate_Tpc_ahmed_method <- function(gamma_g, yN2, yCO2, yH2S) {
   Tpc <- 326 + 315.7 * (gamma_g - 0.5) - 240 * yN2 - 83.3 * yCO2 + 133.3 * yH2S
   return(Tpc)
